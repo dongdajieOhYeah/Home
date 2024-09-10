@@ -1,0 +1,1 @@
+!function(t){t.fn.numberRock=function(e){var n=t.extend({},{speed:24,count:100},e),o=n.count,c=Math.floor(o/100),r=0,u=this,a=1,f=n.speed,i=setInterval(function(){a<=100&&0!=c?(u.text(r=c*a),a++):r<o?u.text(++r):clearInterval(i)},f)}}(jQuery);
