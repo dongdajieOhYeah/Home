@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAZ Travel</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <nav class="navbar justify-content-between navbar-expand-md ">
+
+                        <a class="navbar-brand nav-item"><img class="logo" src="img/jaz-logo.png" alt="JAZ Travel Logo"></a>
+
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-classic" aria-controls="navbar-classic" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar top-bar mt-0"><i class="fa fa-bars"
+                                    style="color: #518169;"></i></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbar-classic">
+                            <ul class="navbar-nav align-items-center ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#features">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#post">Posts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+
+                                    <!-- button trigger -->
+                                    <button data-toggle="modal" data-target="#myModal">Sign Up</button>
+
+                                    <!-- Modal -->
+                                    <div class="modal " id="myModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop>
+
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content rounded-5 shadow">
+
+                                                <div class="modal-header p-5 pb-4 border-bottom-0">
+
+                                                    <h2 class="fw-bold mb-0">Sign up</h2>
+                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"
+                                                            style="font-size: 20px; color: white;"></i></button>
+
+                                                </div>
+
+                                                <div class="modal-body p-5 pt-0">
+                                                    <form>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="email" class="form-control rounded-4 input" id="floatingInput" placeholder="name@example.com" style="width: 400px;">
+                                                            <label for="floatingInput">Email address</label>
+                                                        </div>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="password" class="form-control rounded-4 input" id="floatingPassword" placeholder="Password" style="width: 400px;">
+                                                            <label for="floatingPassword">Password</label>
+                                                        </div>
+                                                        <button class="w-100 mb-2 btn rounded-4" type="submit">Create an
+                                                            account</button>
+
+                                                        <hr class="my-4">
+                                                        <h3 class="fs-5 fw-bold mb-3">Or use a third-party</h3>
+                                                        <button class="w-100 py-2 mb-2 btn rounded-4" type="submit">
+                                                            Sign up with Twitter
+                                                        </button>
+                                                        <button class="w-100 py-2 mb-2 btn rounded-4" type="submit">
+                                                            Sign up with Facebook
+                                                        </button>
+
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- banner -->
+        <section class="banner container">
+            <div class="">
+
+                <div class="row text-center align-items-center d-flex">
+
+                    <div class="col-lg-7 col-md-6 col-sm-12 b-left">
+                        <!-- <div class="left-box"> -->
+                        <div class="b-download">
+                            <h1>Discover more in Canada</h1>
+                            <p class="text-left">JAZ Travel is an free app that offers travel guides and tips by our own users and expert travel bloggers. You will discover high-quality travel reviews and travel route suggestions through social feeds in form of picture posts,
+                                text posts, and short videos based on your searches and interests. Our users share and discuss about their past travel experiences. Besides travel reviews, we also provide detailed travel information, booking for events,
+                                accommodation, and transportation services.
+                            </p>
+                            <div class="justify-content-center d-flex">
+                                <a href="https://www.apple.com/ca/app-store/"><img class="btn" src="img/appstore.png" alt="AppStore"></a>
+                                <a href="https://play.google.com/store"><img class="btn" src="img/googleplay.png" alt="GooglePlay"></a>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 col-sm-12 b-right">
+                        <div class="b-screen-lg">
+                            <img src="img/b-screens.png" alt="App Screen">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Carousel -->
+        <section class="features container" id="features">
+
+            <div class="row text-center">
+                <div class="sec-des">
+                    <h2>Our App Features</h2>
+                    <ul class="text-left">
+                        <li>&hybull;&MediumSpace;Social Feeds that shows travel guides, tips, and reviews in form of image, text, and video.</li>
+                        <li>&hybull;&MediumSpace;Trip Planner with drag and drop feature.</li>
+                        <li>&hybull;&MediumSpace;Direct booking functionality for activities, accommodation, and transportation services, etc.</li>
+                        <li>&hybull;&MediumSpace;Allow users to share their travel experiences by creating posts.</li>
+                    </ul>
+                </div>
+
+                <div id="certify" class="col">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/onboarding.png" alt="JAZ Onboarding Screen" />
+                                <p>Onboarding</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img/feed.png" alt="JAZ Feed Screen" />
+                                <p>Feed</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img/plan.png" alt="JAZ Plan Screen" />
+                                <p>Plan</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img/schedule.png" alt="JAZ Schedule Screen" />
+                                <p>Schedule</p>
+                            </div>
+                            <div class="swiper-slide"><img src="img/hotels.png" alt="JAZ Hotels Screen" />
+                                <p>Booking</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button swiper-button-prev"><i class="fa fa-chevron-circle-left" style="font-size: 48px;"></i></div>
+                    <div class="swiper-button swiper-button-next"><i class="fa fa-chevron-circle-right" style="font-size: 48px;"></i></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Post Examples-->
+        <section class="posts container text-center" id="post">
+
+            <div class="row">
+
+                <h2>The Hottest Posts</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 image">
+                    <img src="img/plog.png" alt="plog">
+                </div>
+                <div class="col-md-6 video">
+                    <img src="img/vlog.png" alt="vlog">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 plog">
+                    <img src="img/image.png" alt="image">
+                </div>
+                <div class="col-md-6 article">
+                    <img src="img/article.png" alt="article">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Our team -->
+        <section class="about text-center container" id="about">
+
+            <div class="row">
+                <div class="sec-des">
+                    <h2>Our Team</h2>
+                    <p>Our team members have extensive and professional experience in the travel industry.</p>
+                </div>
+
+            </div>
+            <div class="row team justify-content-center">
+                <div class=" col-md-4 col-sm-12 col-9">
+                    <div class="card">
+                        <div>
+                            <img class="profile" src="img/s1.png" alt="Austin Yen Profile">
+                        </div>
+                        <h3>Austin Yen</h3>
+                        <p class="job-title">CEO</p>
+                        <p class="job-des">A very pioneering entrepreneur with 20 years experience in the travel industry.
+                        </p>
+                        <div class="row social-icons text-center">
+                            <ul class="d-flex">
+                                <li class="left-1">
+                                    <img src="img/linkedin.png" alt="LinkedIn">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/twitter.png" alt="Twitter">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/facebook.png" alt="Facebook">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/instagram.png" alt="Instagram">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 col-sm-12 col-9">
+                    <div class="card">
+                        <div>
+                            <img class="profile" src="img/s3.png" alt="Zhijing Wu Profile">
+                        </div>
+                        <h3>Zhijing Wu</h3>
+                        <p class="job-title">UI/UX Designer</p>
+                        <p class="job-des">
+                            Experienced UI/UX designers that always sensitive to user needs.
+                        </p>
+                        <div class="row social-icons text-center">
+                            <ul class="d-flex">
+                                <li class="left-1">
+                                    <img src="img/linkedin.png" alt="LinkedIn">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/twitter.png" alt="Twitter">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/facebook.png" alt="Facebook">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/instagram.png" alt="Instagram">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 col-sm-12 col-9">
+                    <div class="card">
+                        <div>
+                            <img class="profile" src="img/s2.png" alt="Junjun Yan Profile">
+                        </div>
+                        <div>
+                            <h3>Junjun Yan</h3>
+                            <p class="job-title">Developer</p>
+                            <p class="job-des">Senior software engineer, specializing in cloud computing and AI.
+                            </p>
+                        </div>
+                        <div class="row social-icons text-center">
+                            <ul class="d-flex">
+                                <li class="left-1">
+                                    <img src="img/linkedin.png" alt="LinkedIn">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/twitter.png" alt="Twitter">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/facebook.png" alt="Facebook">
+                                </li>
+                                <li>
+                                    <img class="social-icon" src="img/instagram.png" alt="Instagram">
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- statistics -->
+            <div class="row stat justify-content-center">
+                <!-- <div class="d-flex"> -->
+                <div class="col-md-3 col-sm-6 col-12 stat-item">
+                    <h3 class="value1 number"></h3>
+                    <h4>Downloads</h4>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12 stat-item">
+                    <h3 class="value2 number"></h3>
+                    <h4>Reviews</h4>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12 stat-item">
+                    <h3 class="value3 number"></h3>
+                    <h4>Posts</h4>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-12 stat-item">
+                    <h3 class="value4 number"></h3>
+                    <h4>Users</h4>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Partners -->
+        <section class="partners text-center container">
+
+            <div class="row">
+                <h2>Our Partners</h2>
+
+            </div>
+            <div class="row logos">
+                <div class="col-sm-3 col-3">
+                    <img src="img/accor.png" alt="Accor">
+                </div>
+                <div class="col-sm-3 col-3">
+                    <img src="img/hilton.png" alt="Hilton">
+                </div>
+                <div class="col-sm-3 col-3">
+                    <img src="img/airbnb.png" alt="AirBnB">
+                </div>
+                <div class="col-sm-3 col-3">
+                    <img src="img/air-canada.png" alt="Air Canada">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-4">
+                    <img src="img/ihg.png" alt="IHG">
+                </div>
+                <div class="col-sm-4 col-4">
+                    <img src="img/westjet.png" alt="westjet">
+                </div>
+                <div class="col-sm-4 col-4">
+                    <img src="img/uber.png" alt="Uber">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 col-3">
+                    <img src="img/lyft.png" alt="Lyft">
+                </div>
+                <div class="col-sm-3 col-3">
+                    <img src="img/okta.png" alt="okta">
+                </div>
+                <div class="col-sm-3 col-3">
+                    <img src="img/box.png" alt="Box">
+                </div>
+                <div class="col-sm-3 col-3">
+                    <img src="img/primark.png" alt="Primark">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-12">
+
+                    <div class="f-download justify-content-center d-flex">
+                        <a href="https://www.apple.com/ca/app-store/"><img class="btn app-btn" src="img/appstore.png" alt="AppStore"></a>
+                        <a href="https://play.google.com/store"><img class="btn goo-btn" src="img/googleplay.png" alt="GooglePlay"></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 col-7">
+                    <div class="f-sec">
+                        <div class="title">
+                            <img class="logo" src="img/jaz-logo.png" alt="JAZ Travel Logo">
+                        </div>
+                        <p class="des">JAZ Travel is not responsible for any content on third party websites not owned or operated by JAZ Travel.</p>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-5">
+                    <!-- <div> -->
+                    <div class="f-sec">
+                        <p class="title">Quick Links</p>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#download">Download</a></li>
+                        </ul>
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="col-md-4 col-12">
+                    <div class="f-sec">
+                        <p class="title">Newsletter</p>
+                        <p>Subscribe our newsletter to get our latest update & news.</p>
+                        <div class="d-flex">
+
+                            <input type="email" class="form-control" placeholder="Your e-mail address">
+                            <img class="s-btn" src="img/send-icon.png" alt="JAZ Travel Subscription">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="row justify-content-center">
+                <p>&copy;&nbsp;Copyright 2021. All Right Reserved</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/count.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
