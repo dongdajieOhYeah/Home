@@ -49,7 +49,10 @@ $(document).ready(function() {
                     $(this).attr('alt', translations[key]);
                 } else if ($(this).is('title')) { // Handle <title> tag separately
                     document.title = translations[key];
-                } else {
+                } else if ($(this).is('meta')) { // Handle <meta> tags
+                    $(this).attr('content', translations[key]);
+                }
+                else {
                     $(this).html(translations[key]);
                 }
             } else {
