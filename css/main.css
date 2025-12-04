@@ -189,3 +189,18 @@ footer p {
         padding: 2rem 0;
     }
 }
+
+/* Language Switcher */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-switcher .dropdown-toggle {
+    margin-left: 15px; /* Spacing from GitHub icon */
+}
+
+.language-switcher .dropdown-menu {
+    min-width: 120px;
+}
