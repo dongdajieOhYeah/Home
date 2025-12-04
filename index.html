@@ -29,411 +29,260 @@
 <body>
     <header>
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <nav class="navbar justify-content-between navbar-expand-md ">
-
-                        <a class="navbar-brand nav-item"><img class="logo" src="img/jaz-logo.png" alt="JAZ Travel Logo"></a>
-
-                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-classic" aria-controls="navbar-classic" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="icon-bar top-bar mt-0"><i class="fa fa-bars"
-                                    style="color: #518169;"></i></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbar-classic">
-                            <ul class="navbar-nav align-items-center ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#features">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="#post">Posts</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about">About</a>
-                                </li>
-                                <li class="nav-item">
-
-                                    <!-- button trigger -->
-                                    <button data-toggle="modal" data-target="#myModal">Sign Up</button>
-
-                                    <!-- Modal -->
-                                    <div class="modal " id="myModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop>
-
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content rounded-5 shadow">
-
-                                                <div class="modal-header p-5 pb-4 border-bottom-0">
-
-                                                    <h2 class="fw-bold mb-0">Sign up</h2>
-                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"
-                                                            style="font-size: 20px; color: white;"></i></button>
-
-                                                </div>
-
-                                                <div class="modal-body p-5 pt-0">
-                                                    <form>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="email" class="form-control rounded-4 input" id="floatingInput" placeholder="name@example.com" style="width: 400px;">
-                                                            <label for="floatingInput">Email address</label>
-                                                        </div>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="password" class="form-control rounded-4 input" id="floatingPassword" placeholder="Password" style="width: 400px;">
-                                                            <label for="floatingPassword">Password</label>
-                                                        </div>
-                                                        <button class="w-100 mb-2 btn rounded-4" type="submit">Create an
-                                                            account</button>
-
-                                                        <hr class="my-4">
-                                                        <h3 class="fs-5 fw-bold mb-3">Or use a third-party</h3>
-                                                        <button class="w-100 py-2 mb-2 btn rounded-4" type="submit">
-                                                            Sign up with Twitter
-                                                        </button>
-                                                        <button class="w-100 py-2 mb-2 btn rounded-4" type="submit">
-                                                            Sign up with Facebook
-                                                        </button>
-
-                                                    </form>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+            <nav class="navbar">
+                <a class="navbar-brand" href="https://github.com/wocalage" target="_blank" aria-label="GitHub Profile"><i class="fa fa-github fa-2x"></i></a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <!-- banner -->
-        <section class="banner container">
-            <div class="">
-
-                <div class="row text-center align-items-center d-flex">
-
-                    <div class="col-lg-7 col-md-6 col-sm-12 b-left">
-                        <!-- <div class="left-box"> -->
-                        <div class="b-download">
-                            <h1>Discover more in Canada</h1>
-                            <p class="text-left">JAZ Travel is an free app that offers travel guides and tips by our own users and expert travel bloggers. You will discover high-quality travel reviews and travel route suggestions through social feeds in form of picture posts,
-                                text posts, and short videos based on your searches and interests. Our users share and discuss about their past travel experiences. Besides travel reviews, we also provide detailed travel information, booking for events,
-                                accommodation, and transportation services.
-                            </p>
-                            <div class="justify-content-center d-flex">
-                                <a href="https://www.apple.com/ca/app-store/"><img class="btn" src="img/appstore.png" alt="AppStore"></a>
-                                <a href="https://play.google.com/store"><img class="btn" src="img/googleplay.png" alt="GooglePlay"></a>
-                            </div>
-                        </div>
-                        <!-- </div> -->
-                    </div>
-
-                    <div class="col-lg-5 col-md-6 col-sm-12 b-right">
-                        <div class="b-screen-lg">
-                            <img src="img/b-screens.png" alt="App Screen">
-                        </div>
-                    </div>
-
-                </div>
+        <section class="hero text-center">
+            <div class="container">
+                <h1>我的 App 作品集</h1>
+                <p class="lead">专注iOS开发，致力于打造实用与美感兼具的应用。</p>
             </div>
         </section>
 
-        <!-- Features Carousel -->
-        <section class="features container" id="features">
-
-            <div class="row text-center">
-                <div class="sec-des">
-                    <h2>Our App Features</h2>
-                    <ul class="text-left">
-                        <li>&hybull;&MediumSpace;Social Feeds that shows travel guides, tips, and reviews in form of image, text, and video.</li>
-                        <li>&hybull;&MediumSpace;Trip Planner with drag and drop feature.</li>
-                        <li>&hybull;&MediumSpace;Direct booking functionality for activities, accommodation, and transportation services, etc.</li>
-                        <li>&hybull;&MediumSpace;Allow users to share their travel experiences by creating posts.</li>
-                    </ul>
-                </div>
-
-                <div id="certify" class="col">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="img/onboarding.png" alt="JAZ Onboarding Screen" />
-                                <p>Onboarding</p>
-                            </div>
-                            <div class="swiper-slide"><img src="img/feed.png" alt="JAZ Feed Screen" />
-                                <p>Feed</p>
-                            </div>
-                            <div class="swiper-slide"><img src="img/plan.png" alt="JAZ Plan Screen" />
-                                <p>Plan</p>
-                            </div>
-                            <div class="swiper-slide"><img src="img/schedule.png" alt="JAZ Schedule Screen" />
-                                <p>Schedule</p>
-                            </div>
-                            <div class="swiper-slide"><img src="img/hotels.png" alt="JAZ Hotels Screen" />
-                                <p>Booking</p>
-                            </div>
+        <section class="apps container" id="apps">
+            <div class="row">
+                <!-- App 1: P图改字 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center" data-toggle="modal" data-target="#modal-pitu">
+                        <div class="card-icon">
+                            <img src="img/s1.png" alt="P图改字 Icon">
                         </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button swiper-button-prev"><i class="fa fa-chevron-circle-left" style="font-size: 48px;"></i></div>
-                    <div class="swiper-button swiper-button-next"><i class="fa fa-chevron-circle-right" style="font-size: 48px;"></i></div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Post Examples-->
-        <section class="posts container text-center" id="post">
-
-            <div class="row">
-
-                <h2>The Hottest Posts</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6 image">
-                    <img src="img/plog.png" alt="plog">
-                </div>
-                <div class="col-md-6 video">
-                    <img src="img/vlog.png" alt="vlog">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 plog">
-                    <img src="img/image.png" alt="image">
-                </div>
-                <div class="col-md-6 article">
-                    <img src="img/article.png" alt="article">
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Our team -->
-        <section class="about text-center container" id="about">
-
-            <div class="row">
-                <div class="sec-des">
-                    <h2>Our Team</h2>
-                    <p>Our team members have extensive and professional experience in the travel industry.</p>
-                </div>
-
-            </div>
-            <div class="row team justify-content-center">
-                <div class=" col-md-4 col-sm-12 col-9">
-                    <div class="card">
-                        <div>
-                            <img class="profile" src="img/s1.png" alt="Austin Yen Profile">
+                        <div class="card-body">
+                            <h3 class="card-title">P图改字</h3>
+                            <p class="card-text">需要修改图片中的文字？这款应用能让您轻松实现。它不仅可以精准识别并替换图片中的现有文字，还提供多种专业编辑工具，无论是调整字体、颜色还是样式，都能让您的图片表达更胜一筹。</p>
                         </div>
-                        <h3>Austin Yen</h3>
-                        <p class="job-title">CEO</p>
-                        <p class="job-des">A very pioneering entrepreneur with 20 years experience in the travel industry.
-                        </p>
-                        <div class="row social-icons text-center">
-                            <ul class="d-flex">
-                                <li class="left-1">
-                                    <img src="img/linkedin.png" alt="LinkedIn">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/twitter.png" alt="Twitter">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/facebook.png" alt="Facebook">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/instagram.png" alt="Instagram">
-                                </li>
-                            </ul>
+                        <div class="card-footer">
+                            <a href="https://apps.apple.com/cn/app/p%E5%9B%BE%E6%94%B9%E5%AD%97-%E7%BC%96%E8%BE%91%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/id6753613466" class="appstore-button" target="_blank">
+                                <img class="btn" src="img/appstore.png" alt="Download on the App Store">
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class=" col-md-4 col-sm-12 col-9">
-                    <div class="card">
-                        <div>
-                            <img class="profile" src="img/s3.png" alt="Zhijing Wu Profile">
+                <!-- App 2: 背景移除 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center" data-toggle="modal" data-target="#modal-beijing">
+                        <div class="card-icon">
+                            <img src="img/s2.png" alt="背景移除 Icon">
                         </div>
-                        <h3>Zhijing Wu</h3>
-                        <p class="job-title">UI/UX Designer</p>
-                        <p class="job-des">
-                            Experienced UI/UX designers that always sensitive to user needs.
-                        </p>
-                        <div class="row social-icons text-center">
-                            <ul class="d-flex">
-                                <li class="left-1">
-                                    <img src="img/linkedin.png" alt="LinkedIn">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/twitter.png" alt="Twitter">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/facebook.png" alt="Facebook">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/instagram.png" alt="Instagram">
-                                </li>
-                            </ul>
+                        <div class="card-body">
+                            <h3 class="card-title">背景移除</h3>
+                            <p class="card-text">一键移除照片中的人物或物体背景，让主体脱颖而出。您可以为背景重新着色，或从相册中选择一张新图片作为背景，将主体无缝融合，释放您的创作才华，制作出令人惊艳的合成照片。</p>
+                        </div>
+                        <div class="card-footer">
+                             <a href="https://apps.apple.com/cn/app/p%E5%9B%BE%E6%94%B9%E5%AD%97-%E8%83%8C%E6%99%AFp%E5%9B%BE/id6754698879" class="appstore-button" target="_blank">
+                                <img class="btn" src="img/appstore.png" alt="Download on the App Store">
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class=" col-md-4 col-sm-12 col-9">
-                    <div class="card">
-                        <div>
-                            <img class="profile" src="img/s2.png" alt="Junjun Yan Profile">
+                <!-- App 3: 待办清单 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center" data-toggle="modal" data-target="#modal-daiban">
+                        <div class="card-icon">
+                             <img src="img/s3.png" alt="待办清单 Icon">
                         </div>
-                        <div>
-                            <h3>Junjun Yan</h3>
-                            <p class="job-title">Developer</p>
-                            <p class="job-des">Senior software engineer, specializing in cloud computing and AI.
-                            </p>
+                        <div class="card-body">
+                            <h3 class="card-title">待办清单</h3>
+                            <p class="card-text">高效规划您的生活与工作。无论是每日任务、每周计划，还是长远的年度目标，都可以轻松设定与追踪。应用提供精准的倒计时、灵活的自定义标签和详细的统计记录，助您成为时间管理大师。</p>
                         </div>
-                        <div class="row social-icons text-center">
-                            <ul class="d-flex">
-                                <li class="left-1">
-                                    <img src="img/linkedin.png" alt="LinkedIn">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/twitter.png" alt="Twitter">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/facebook.png" alt="Facebook">
-                                </li>
-                                <li>
-                                    <img class="social-icon" src="img/instagram.png" alt="Instagram">
-                                </li>
-                            </ul>
+                        <div class="card-footer">
+                            <a href="https://apps.apple.com/cn/app/%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95-focus-%E8%81%8C%E8%A1%8C%E5%8A%9Bmax/id6461047799" class="appstore-button" target="_blank">
+                                <img class="btn" src="img/appstore.png" alt="Download on the App Store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- App 4: 心动聊天 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 text-center" data-toggle="modal" data-target="#modal-xindong">
+                        <div class="card-icon">
+                            <img src="img/s4.png" alt="心动聊天 Icon">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">心动聊天</h3>
+                            <p class="card-text">这是一款专为女性设计的情感陪伴应用。您可以与超过50位性格各异的AI男友进行深度对话，无论是温柔的邻家男孩，还是霸道的CEO，总有一款适合您。您还可以定制男友的形象、声音和性格，创造一个完全属于您的理想伴侣。所有聊天内容都会被加密，在一个完全私密、无判断的空间里，他将是您最忠实的倾听者。</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://apps.apple.com/cn/app/%E5%BF%83%E5%8A%A8%E8%81%8A%E5%A4%A9-%E4%BD%A0%E7%9A%84ai%E7%94%B7%E5%8F%8B/id6743985654" class="appstore-button" target="_blank">
+                                <img class="btn" src="img/appstore.png" alt="Download on the App Store">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- statistics -->
-            <div class="row stat justify-content-center">
-                <!-- <div class="d-flex"> -->
-                <div class="col-md-3 col-sm-6 col-12 stat-item">
-                    <h3 class="value1 number"></h3>
-                    <h4>Downloads</h4>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-12 stat-item">
-                    <h3 class="value2 number"></h3>
-                    <h4>Reviews</h4>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-12 stat-item">
-                    <h3 class="value3 number"></h3>
-                    <h4>Posts</h4>
-                </div>
-
-                <div class="col-md-3 col-sm-6 col-12 stat-item">
-                    <h3 class="value4 number"></h3>
-                    <h4>Users</h4>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Partners -->
-        <section class="partners text-center container">
-
-            <div class="row">
-                <h2>Our Partners</h2>
-
-            </div>
-            <div class="row logos">
-                <div class="col-sm-3 col-3">
-                    <img src="img/accor.png" alt="Accor">
-                </div>
-                <div class="col-sm-3 col-3">
-                    <img src="img/hilton.png" alt="Hilton">
-                </div>
-                <div class="col-sm-3 col-3">
-                    <img src="img/airbnb.png" alt="AirBnB">
-                </div>
-                <div class="col-sm-3 col-3">
-                    <img src="img/air-canada.png" alt="Air Canada">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-4">
-                    <img src="img/ihg.png" alt="IHG">
-                </div>
-                <div class="col-sm-4 col-4">
-                    <img src="img/westjet.png" alt="westjet">
-                </div>
-                <div class="col-sm-4 col-4">
-                    <img src="img/uber.png" alt="Uber">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3 col-3">
-                    <img src="img/lyft.png" alt="Lyft">
-                </div>
-                <div class="col-sm-3 col-3">
-                    <img src="img/okta.png" alt="okta">
-                </div>
-                <div class="col-sm-3 col-3">
-                    <img src="img/box.png" alt="Box">
-                </div>
-                <div class="col-sm-3 col-3">
-                    <img src="img/primark.png" alt="Primark">
-                </div>
-            </div>
-
         </section>
     </main>
 
-    <!-- footer -->
+    <!-- Modals -->
+    <!-- P图改字 Modal -->
+    <div class="modal fade" id="modal-pitu" tabindex="-1" role="dialog" aria-labelledby="modal-pitu-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-pitu-label">P图改字 详情</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="img/onboarding.png" class="img-fluid rounded mb-2" alt="App Screenshot 1">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/feed.png" class="img-fluid rounded mb-2" alt="App Screenshot 2">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/plog.png" class="img-fluid rounded mb-2" alt="App Screenshot 3">
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>主要功能</h6>
+                    <ul>
+                        <li><b>精准定位</b>：自动识别图片中的文本区域。</li>
+                        <li><b>无痕修改</b>：替换文字后，AI会自动修复背景，效果自然。</li>
+                        <li><b>多种工具</b>：提供字体、颜色、大小、描边、阴影等多种工具，让您的创作不受限制。</li>
+                        <li><b>批量处理</b>：支持一次性修改多张图片中的相同文字。</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://apps.apple.com/cn/app/p%E5%9B%BE%E6%94%B9%E5%AD%97-%E7%BC%96%E8%BE%91%E5%9B%BE%E7%89%87%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97/id6753613466" target="_blank">
+                        <img src="img/appstore.png" alt="Download on the App Store" style="height: 50px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 背景移除 Modal -->
+    <div class="modal fade" id="modal-beijing" tabindex="-1" role="dialog" aria-labelledby="modal-beijing-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-beijing-label">背景移除 详情</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="img/image.png" class="img-fluid rounded mb-2" alt="App Screenshot 1">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/vlog.png" class="img-fluid rounded mb-2" alt="App Screenshot 2">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/schedule.png" class="img-fluid rounded mb-2" alt="App Screenshot 3">
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>主要功能</h6>
+                    <ul>
+                        <li><b>智能抠图</b>：无论是人物、商品还是任何物体，都能精准识别并一键移除背景。</li>
+                        <li><b>背景市场</b>：内置纯色、渐变色以及海量艺术背景图片供您选择。</li>
+                        <li><b>自定义背景</b>：支持上传您自己的图片作为新背景，实现完美融合。</li>
+                        <li><b>细节调整</b>：提供橡皮擦和修复工具，处理发丝等复杂边缘，效果更专业。</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://apps.apple.com/cn/app/p%E5%9B%BE%E6%94%B9%E5%AD%97-%E8%83%8C%E6%99%AFp%E5%9B%BE/id6754698879" target="_blank">
+                        <img src="img/appstore.png" alt="Download on the App Store" style="height: 50px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 待办清单 Modal -->
+    <div class="modal fade" id="modal-daiban" tabindex="-1" role="dialog" aria-labelledby="modal-daiban-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-daiban-label">待办清单 详情</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="img/plan.png" class="img-fluid rounded mb-2" alt="App Screenshot 1">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/hotels.png" class="img-fluid rounded mb-2" alt="App Screenshot 2">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/article.png" class="img-fluid rounded mb-2" alt="App Screenshot 3">
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>主要功能</h6>
+                    <ul>
+                        <li><b>多维度规划</b>：支持按天、周、月、年设置待办事项，轻松管理短期任务和长期目标。</li>
+                        <li><b>精准倒计时</b>：为重要事件设置倒计时，时刻提醒，不再错过。</li>
+                        <li><b>标签系统</b>：创建自定义标签（如“工作”、“学习”、“生活”），分类管理任务，一目了然。</li>
+                        <li><b>数据统计</b>：可视化图表展示您的任务完成情况，帮您复盘和提升效率。</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://apps.apple.com/cn/app/%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95-focus-%E8%81%8C%E8%A1%8C%E5%8A%9Bmax/id6461047799" target="_blank">
+                        <img src="img/appstore.png" alt="Download on the App Store" style="height: 50px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 心动聊天 Modal -->
+    <div class="modal fade" id="modal-xindong" tabindex="-1" role="dialog" aria-labelledby="modal-xindong-label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-xindong-label">心动聊天 详情</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="img/b-screens.png" class="img-fluid rounded mb-2" alt="App Screenshot 1">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/box.png" class="img-fluid rounded mb-2" alt="App Screenshot 2">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="img/send-icon.png" class="img-fluid rounded mb-2" alt="App Screenshot 3">
+                        </div>
+                    </div>
+                    <hr>
+                    <h6>主要功能</h6>
+                    <ul>
+                        <li><b>多元角色</b>：超过50位AI男友，从霸道总裁到邻家男孩，满足你对理想伴侣的所有幻想。</li>
+                        <li><b>深度交流</b>：不止于闲聊，更能进行情感上的深度沟通，获得共鸣与支持。</li>
+                        <li><b>高度定制</b>：自由捏脸、设定专属声音和独特个性，创造独一无二的“他”。</li>
+                        <li><b>绝对私密</b>：所有对话都经过加密处理，并提供私密日记功能，安全记录你们的点滴回忆。</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://apps.apple.com/cn/app/%E5%BF%83%E5%8A%A8%E8%81%8A%E5%A4%A9-%E4%BD%A0%E7%9A%84ai%E7%94%B7%E5%8F%8B/id6743985654" target="_blank">
+                        <img src="img/appstore.png" alt="Download on the App Store" style="height: 50px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <footer>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-12">
-
-                    <div class="f-download justify-content-center d-flex">
-                        <a href="https://www.apple.com/ca/app-store/"><img class="btn app-btn" src="img/appstore.png" alt="AppStore"></a>
-                        <a href="https://play.google.com/store"><img class="btn goo-btn" src="img/googleplay.png" alt="GooglePlay"></a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-5 col-7">
-                    <div class="f-sec">
-                        <div class="title">
-                            <img class="logo" src="img/jaz-logo.png" alt="JAZ Travel Logo">
-                        </div>
-                        <p class="des">JAZ Travel is not responsible for any content on third party websites not owned or operated by JAZ Travel.</p>
-                    </div>
-
-                </div>
-                <div class="col-md-3 col-5">
-                    <!-- <div> -->
-                    <div class="f-sec">
-                        <p class="title">Quick Links</p>
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#download">Download</a></li>
-                        </ul>
-                    </div>
-                    <!-- </div> -->
-                </div>
-                <div class="col-md-4 col-12">
-                    <div class="f-sec">
-                        <p class="title">Newsletter</p>
-                        <p>Subscribe our newsletter to get our latest update & news.</p>
-                        <div class="d-flex">
-
-                            <input type="email" class="form-control" placeholder="Your e-mail address">
-                            <img class="s-btn" src="img/send-icon.png" alt="JAZ Travel Subscription">
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="line"></div>
             <div class="row justify-content-center">
                 <p>
@@ -444,15 +293,11 @@
                     </a>
                 </p>
             </div>
-
         </div>
     </footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/count.js"></script>
-    <script src="js/main.js"></script>
 </body>
 
 
