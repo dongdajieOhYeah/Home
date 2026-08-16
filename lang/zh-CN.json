@@ -39,9 +39,9 @@
   "app_xindong_feature_3": "高度定制：自由捏脸、设定专属声音和独特个性，创造独一无二的“他”。",
   "app_xindong_feature_4": "绝对私密：所有对话都经过加密处理，并提供私密日记功能，安全记录你们的点滴回忆。",
 
-  "app_offlinemusic_title": "Offline Music",
-  "app_offlinemusic_description": "随时随地，想听就听。Offline Music 是一款专为离线听歌打造的全能音乐播放器，帮您发现、导入并管理喜爱的音乐。告别流量焦虑与网络缓冲，无论在飞机上、地铁里还是信号微弱的户外，好声音始终陪伴在您身边。",
-  "app_offlinemusic_modal_title": "Offline Music 详情",
+  "app_offlinemusic_title": "离线播放器",
+  "app_offlinemusic_description": "随时随地，想听就听。离线播放器是一款专为离线听歌打造的全能音乐播放器，帮您发现、导入并管理喜爱的音乐。告别流量焦虑与网络缓冲，无论在飞机上、地铁里还是信号微弱的户外，好声音始终陪伴在您身边。",
+  "app_offlinemusic_modal_title": "离线播放器 详情",
   "app_offlinemusic_features_title": "主要功能",
   "app_offlinemusic_feature_1": "真正的离线播放：歌曲播放或导入后自动缓存到本地，没网也能听；支持锁屏与后台播放，听歌玩手机两不误。",
   "app_offlinemusic_feature_2": "WiFi 与文件导入：在桌面浏览器输入地址即可无线批量上传音乐，也可从 iOS“文件”App 直接导入音频和视频。",

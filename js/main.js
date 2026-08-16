@@ -30,7 +30,7 @@ $(document).ready(function () {
     //（以下为你的原有翻译、多语言逻辑，不变）
     let translations = {};
     let currentLang = '';
-    const defaultLang = 'zh-CN';
+    const defaultLang = 'en';
 
     function loadTranslations(lang) {
         fetch(`lang/${lang}.json`)
