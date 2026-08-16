@@ -39,6 +39,16 @@
   "app_xindong_feature_3": "Highly Customizable: Freely design face, set exclusive voice and unique personality to create a unique 'him'.",
   "app_xindong_feature_4": "Absolute Privacy: All conversations are encrypted, and a private diary function is provided to securely record your memories.",
 
+  "app_offlinemusic_title": "Offline Music",
+  "app_offlinemusic_description": "Listen anytime, anywhere. Offline Music is a powerful all-in-one music player designed for offline listening, helping you discover, import and manage your favorite music. Say goodbye to data anxiety and buffering — whether on a plane, in the subway, or outdoors with a weak signal, your favorite songs are always with you.",
+  "app_offlinemusic_modal_title": "Offline Music Details",
+  "app_offlinemusic_features_title": "Main Features",
+  "app_offlinemusic_feature_1": "True Offline Playback: Songs are automatically cached locally once played or imported — no network needed. Supports lock-screen and background playback.",
+  "app_offlinemusic_feature_2": "WiFi & File Import: Batch-upload music wirelessly via your desktop browser, or import audio and video directly from the iOS Files app.",
+  "app_offlinemusic_feature_3": "Powerful Library Management: Create unlimited playlists, auto-track 'Recently Played' and 'Most Played', and bookmark your favorite web pages.",
+  "app_offlinemusic_feature_4": "Pro Playback Experience: Loop, repeat-one, and shuffle modes, plus a sleep timer from 15 minutes to 6 hours and lock-screen controls.",
+  "app_offlinemusic_feature_5": "Minimal & Efficient: Quick search across local songs and history, one-tap cache cleanup, native iOS interaction with dark/light mode switching.",
+
   "modal_close": "Close",
   "copyright": "© Copyright 2025. All Right Reserved",
   "privacy_policy": "Privacy Policy",
