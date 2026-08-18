@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>body{margin:0;background:transparent;-webkit-user-select:none;}</style>
+</head>
+<body>
+<script>
+function post(type, payload) {
+  try { window.webkit.messageHandlers.drivePicker.postMessage({ type: type, payload: payload }); } catch (e) {}
+}
+function onApiLoad() {
+  gapi.load('auth2', function() {
+    gapi.auth2.init({
+      client_id: '6571635697-qv477jvt2qpi003fnf52jp623t98av21.apps.googleusercontent.com',
+      scope: 'https://www.googleapis.com/auth/drive.file',
+      fetch_basic_profile: false
+    }).then(function() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      if (auth2.isSignedIn.get()) {
+        onSignedIn(auth2.currentUser.get());
+      } else {
+        auth2.signIn().then(onSignedIn, function(e) { post('error', 'Google sign-in failed.'); });
+      }
+    }, function(e) { post('error', 'Could not initialize Google sign-in.'); });
+  });
+}
+function onSignedIn(googleUser) {
+  var auth = googleUser.getAuthResponse();
+  var accessToken = auth.access_token;
+  gapi.load('picker', function() { openPicker(accessToken); });
+}
+function openPicker(accessToken) {
+  try {
+    var view = new google.picker.DocsView(google.picker.ViewId.DOCS)
+        .setIncludeFolders(true)
+        .setSelectFolderEnabled(false);
+    var picker = new google.picker.PickerBuilder()
+        .addView(view)
+        .setOAuthToken(accessToken)
+        .setAppId('6571635697')
+        .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+        .setCallback(function(data) { pickerCallback(data, accessToken); })
+        .build();
+    picker.setVisible(true);
+  } catch (e) {
+    post('error', 'Failed to open the Google Drive Picker.');
+  }
+}
+function pickerCallback(data, accessToken) {
+  var action = data[google.picker.Response.ACTION];
+  if (action === google.picker.Action.PICKED) {
+    var docs = data[google.picker.Response.DOCUMENTS] || [];
+    var files = [];
+    for (var i = 0; i < docs.length; i++) {
+      var d = docs[i];
+      files.push({
+        id: d[google.picker.Document.ID],
+        name: d[google.picker.Document.NAME],
+        mimeType: d[google.picker.Document.MIME_TYPE] || '',
+        sizeBytes: d[google.picker.Document.SIZE_BYTES] || 0
+      });
+    }
+    post('result', { token: accessToken, files: files });
+  } else if (action === google.picker.Action.CANCEL) {
+    post('cancel', null);
+  }
+}
+</script>
+<script src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+</body>
+</html>
