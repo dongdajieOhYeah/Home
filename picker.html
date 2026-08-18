@@ -4,48 +4,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
+<script src="https://accounts.google.com/gsi/client"></script>
 <script>
 function post(type, payload) {
   try { window.webkit.messageHandlers.drivePicker.postMessage({ type: type, payload: payload }); } catch (e) {}
 }
 function onApiLoad() {
-  gapi.load('auth2', function() {
-    gapi.auth2.init({
-      client_id: '6571635697-rual82058960vmv03oprregdu4vt9m2c.apps.googleusercontent.com',
-      scope: 'https://www.googleapis.com/auth/drive.file',
-      fetch_basic_profile: false
-    }).then(function() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      if (auth2.isSignedIn.get()) { onSignedIn(auth2.currentUser.get()); }
-      else { auth2.signIn().then(onSignedIn, function(e){ post('error','sign-in failed: '+(e&&e.error?e.error:'unknown')); }); }
-    }, function(e) {
-      var type = (e && e.error) ? e.error : ((e && e.type) || 'unknown');
-      var detail = (e && e.details) ? e.details : '';
-      post('error', 'Google init failed: ' + type + (detail ? ' - ' + detail : ''));
-    });
-  });
+  gapi.load('picker', function() { requestToken(); });
 }
-function onSignedIn(googleUser) {
-  var accessToken = googleUser.getAuthResponse().access_token;
-  gapi.load('picker', function() {
-    var view = new google.picker.DocsView(google.picker.ViewId.DOCS).setIncludeFolders(true).setSelectFolderEnabled(false);
-    var picker = new google.picker.PickerBuilder()
-      .addView(view).setOAuthToken(accessToken).setAppId('6571635697')
-      .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
-      .setCallback(function(data){
-        var action = data[google.picker.Response.ACTION];
-        if (action === google.picker.Action.PICKED) {
-          var docs = data[google.picker.Response.DOCUMENTS] || [];
-          var files = [];
-          for (var i=0;i<docs.length;i++){ var d=docs[i]; files.push({ id:d[google.picker.Document.ID], name:d[google.picker.Document.NAME], mimeType:d[google.picker.Document.MIME_TYPE]||'', sizeBytes:d[google.picker.Document.SIZE_BYTES]||0 }); }
-          post('result', { token: accessToken, files: files });
-        } else if (action === google.picker.Action.CANCEL) {
-          post('cancel', null);
-        }
-      })
-      .build();
-    picker.setVisible(true);
+function requestToken() {
+  if (!window.google || !google.accounts || !google.accounts.oauth2) {
+    post('error', 'Google Identity Services did not load.'); return;
+  }
+  var client = google.accounts.oauth2.initTokenClient({
+    client_id: '6571635697-rual82058960vmv03oprregdu4vt9m2c.apps.googleusercontent.com',
+    scope: 'https://www.googleapis.com/auth/drive.file',
+    callback: function(tokenResponse) {
+      if (tokenResponse && tokenResponse.access_token) { openPicker(tokenResponse.access_token); }
+      else { post('error', 'No access token returned.'); }
+    },
+    error_callback: function(error) {
+      post('error', (error && (error.message || error.type || error.error)) || 'Token request failed.');
+    }
   });
+  client.requestAccessToken();
+}
+function openPicker(accessToken) {
+  var view = new google.picker.DocsView(google.picker.ViewId.DOCS).setIncludeFolders(true).setSelectFolderEnabled(false);
+  var picker = new google.picker.PickerBuilder()
+    .addView(view).setOAuthToken(accessToken).setAppId('6571635697')
+    .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+    .setCallback(function(data){
+      var action = data[google.picker.Response.ACTION];
+      if (action === google.picker.Action.PICKED) {
+        var docs = data[google.picker.Response.DOCUMENTS] || [];
+        var files = [];
+        for (var i=0;i<docs.length;i++){ var d=docs[i]; files.push({ id:d[google.picker.Document.ID], name:d[google.picker.Document.NAME], mimeType:d[google.picker.Document.MIME_TYPE]||'', sizeBytes:d[google.picker.Document.SIZE_BYTES]||0 }); }
+        post('result', { token: accessToken, files: files });
+      } else if (action === google.picker.Action.CANCEL) {
+        post('cancel', null);
+      }
+    })
+    .build();
+  picker.setVisible(true);
 }
 </script>
 <script src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
