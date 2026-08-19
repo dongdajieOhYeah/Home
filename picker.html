@@ -2,17 +2,25 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+body{margin:0;font-family:-apple-system,Helvetica,sans-serif;}
+#btn{display:none;margin:35% auto 0;padding:15px 28px;font-size:16px;color:#fff;background:#1a73e8;border:none;border-radius:8px;}
+</style>
 </head>
 <body>
-<script src="https://accounts.google.com/gsi/client"></script>
+<button id="btn" onclick="start()">Connect Google Drive</button>
 <script>
+var gisReady = false, pickerReady = false;
 function post(type, payload) {
   try { window.webkit.messageHandlers.drivePicker.postMessage({ type: type, payload: payload }); } catch (e) {}
 }
-function onApiLoad() {
-  gapi.load('picker', function() { requestToken(); });
+function onGisLoad() { gisReady = true; showButton(); }
+function onGisError() { post('error', 'Failed to load Google Identity Services (gsi/client).'); }
+function onApiLoad() { gapi.load('picker', function() { pickerReady = true; showButton(); }); }
+function showButton() {
+  if (gisReady && pickerReady) { document.getElementById('btn').style.display = 'block'; }
 }
-function requestToken() {
+function start() {
   if (!window.google || !google.accounts || !google.accounts.oauth2) {
     post('error', 'Google Identity Services did not load.'); return;
   }
@@ -49,6 +57,7 @@ function openPicker(accessToken) {
   picker.setVisible(true);
 }
 </script>
+<script src="https://accounts.google.com/gsi/client" onload="onGisLoad()" onerror="onGisError()"></script>
 <script src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
 </body>
 </html>
